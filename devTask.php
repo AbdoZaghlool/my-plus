@@ -62,7 +62,7 @@ class ShapeFactory
 }
 
 
-class Rectangle extends GeometryShape implements ShapeInterface
+class Rectangle extends GeometryShape implements ShapeInterface, PolygonInterface
 {
     protected $height;
     protected $width;
@@ -81,6 +81,11 @@ class Rectangle extends GeometryShape implements ShapeInterface
     public function getArea()
     {
         return ($this->width * $this->height);
+    }
+
+    public function getAngles()
+    {
+        return 4;
     }
 }
 
